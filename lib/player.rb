@@ -8,9 +8,9 @@ attr_accessor :name, :life_points
 
   def show_state
     if self.life_points > 0
-    "#{self.name} a #{self.life_points} points de vie restant."
+      "#{self.name} a #{self.life_points} points de vie restant."
     else
-    "#{self.name} est mort."
+      "#{self.name} est mort."
     end
   end
 
@@ -41,7 +41,7 @@ attr_accessor :weapon_level
   end
 
   def show_state
-    "#{self.name} a #{self.life_points} points de vie restant et une arme de niveau #{self.weapon_level}."
+    "Tu as #{self.life_points} points de vie restant et une arme de niveau #{self.weapon_level}."
   end
 
   def compute_damage
@@ -55,7 +55,7 @@ attr_accessor :weapon_level
   end
 
   def search_weapon
-    weapon_found = rand(1..5)
+    weapon_found = rand(1..4)
     puts "Tu as trouvé une arme de niveau #{weapon_found}."
     if weapon_found > self.weapon_level
       puts "Bien joué ! Tu remplaces ton arme de niveau #{self.weapon_level} pour une arme de niveau #{weapon_found}."
